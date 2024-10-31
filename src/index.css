@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  height: 100vh;
+  weight: 100vw;
+
+  font-family:
+    Palatino,
+    Garamond,
+    Times New Roman,
+    Georgia,
+    serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Realtime colors settings */
+@layer base {
+  :root {
+    --text: 263 31% 5%;
+    --background: 267 29% 94%;
+    --primary: 271 32% 29%;
+    --secondary: 313 33% 66%;
+    --accent: 330 32% 46%;
+  }
+  .dark {
+    --text: 267 33% 95%;
+    --background: 267 31% 6%;
+    --primary: 271 32% 71%;
+    --secondary: 312 33% 34%;
+    --accent: 330 32% 54%;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
