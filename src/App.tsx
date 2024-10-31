@@ -1,10 +1,9 @@
-import "./App.css";
-
-function App() {
+const App = () => {
   return (
     <div className="dark h-screen w-screen flex justify-center bg-background items-center">
       <main className="h-screen w-2/5 flex justify-center items-start flex-col gap-5">
         <h1 className="text-3xl text-primary">Raj Nikam</h1>
+
         <div>
           I'm a programmer from Thane, Maharashtra. I like chess, computers and
           stories.
@@ -24,6 +23,6 @@ function App() {
       </main>
     </div>
   );
-}
+};
 
 export default App;
