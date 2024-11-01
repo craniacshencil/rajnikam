@@ -7,11 +7,12 @@
   weight: 100vw;
 
   font-family:
-    Garamond,
     Palatino,
-    Times New Roman,
+    serif,
     Georgia,
-    serif;
+    Garamond,
+    Times New Roman;
+
   font-size: 1.1rem;
   line-height: 1.5;
   font-weight: 400;
