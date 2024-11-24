@@ -1,29 +1,9 @@
+import Header from "./components/Header";
 const App = () => {
   return (
     <div className="dark flex justify-center bg-background items-center">
       <main className="min-h-screen w-10/12 md:m-10 lg:m-0 lg:w-2/5 flex justify-center items-start flex-col gap-5">
-        <div className="w-full flex justify-between flex-wrap items-center">
-          <h1 className="text-3xl self-end text-primary">Raj Nikam</h1>
-          <nav className="flex justify-around gap-2 mt-1 text-m self-start text-primary font-bold">
-            <a className="underline underline-offset-4 text-accent" href={`/`}>
-              Home
-            </a>
-            <p>|</p>
-            <a
-              className="hover:text-secondary transition duration-300"
-              href={`/blogs`}
-            >
-              Blog{" "}
-            </a>
-            <p>|</p>
-            <a
-              className="transition duration-300 hover:text-secondary"
-              href={`/resume`}
-            >
-              Resume
-            </a>
-          </nav>
-        </div>
+        <Header activeTab="home" />
 
         <div>
           I'm a programmer from Thane, Maharashtra. I like chess, computers and

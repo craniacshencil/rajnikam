@@ -1,12 +1,11 @@
+import Header from "../components/Header";
 const Blog: React.FC = () => {
   return (
-    <div className="dark h-screen w-screen justify-center bg-background items-center">
-      <div className="text-sm">Hello world</div>
-      <div>Hello world</div>
-      <div className="text-m">Hello world</div>
-      <div className="text-lg">Hello world</div>
-      <div className="text-xl">Hello world</div>
-      <div className="text-2xl">Hello world</div>
+    <div className="dark flex flex-col justify-center bg-background items-center">
+      <div className="min-h-screen w-10/12 md:m-10 lg:m-0 lg:w-2/5 flex justify-center items-start flex-col gap-5">
+        <Header activeTab="blog" />
+        Hello
+      </div>
     </div>
   );
 };
