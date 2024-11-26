@@ -10,6 +10,7 @@ const Header: React.FC<headerInputs> = ({ activeTab }) => {
       <h1 className="text-3xl self-end text-primary">Raj Nikam</h1>
       <nav className="flex justify-around gap-2 mt-1 text-m self-start text-primary font-bold">
         <a
+          // This adds different styling on the basis of which page it is on
           className={twMerge(
             clsx(
               activeTab == "home" && "underline underline-offset-4 text-accent",
