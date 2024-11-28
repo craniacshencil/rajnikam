@@ -1,9 +1,9 @@
 import Header from "../components/Header";
-import React from "react";
-import DockerNoob from "../blogs/docker_noob.mdx";
+import Blogcard from "../components/Blogcard";
+import { useEffect, useState } from "react";
 const modules = import.meta.glob("../blogs/*.mdx");
 
-interface blogInfo {
+export interface blogInfo {
   title: string;
   slug: string;
   date: Date;
@@ -11,40 +11,43 @@ interface blogInfo {
 }
 
 async function getBlogFrontmatter() {
-  const blogList: blogInfo[] = [];
   // Check out import.meta.glob docs on vite
   // Check out frontmatter guide on mdx
-  Object.keys(modules).forEach((fileName) => {
-    modules[fileName]().then((file: any) => {
-      const blog: blogInfo = {
+  const blogList: blogInfo[] = await Promise.all(
+    Object.keys(modules).map(async (fileName) => {
+      const file: any = await modules[fileName]();
+      return {
         title: file.title,
-        slug: file.title,
+        slug: file.slug,
         date: file.date,
         excerpt: file.excerpt,
       };
-      blogList.push(blog);
-    });
-  });
+    }),
+  );
   return blogList;
 }
 
 const Blog: React.FC = () => {
-  // Getting frontmatter from blogs to display all the blogs
-  let blogList: blogInfo[];
-  try {
-    getBlogFrontmatter().then((data) => {
-      blogList = data;
-      console.log(blogList);
-    });
-  } catch (err) {
-    console.log(err);
-  }
+  const [blogs, setblogs] = useState<blogInfo[]>([]);
+  useEffect(() => {
+    getBlogFrontmatter().then((blogList) => setblogs(blogList));
+  }, []);
 
   return (
     <div className="dark text-white flex flex-col justify-center bg-background items-center">
       <div className="min-h-screen w-10/12 md:m-10 lg:m-0 xl:w-2/5 flex justify-center items-start flex-col gap-5">
         <Header activeTab="blog" />
-        <DockerNoob />
+        <div>Hello there</div>
+        <div>
+          {blogs.map((blog: blogInfo) => (
+            <Blogcard
+              key={blog.slug}
+              title={blog.title}
+              date={blog.date}
+              excerpt={blog.excerpt}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

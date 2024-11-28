@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
-import React from "react";
 interface headerInputs {
   activeTab: "home" | "blog" | "resume";
 }
@@ -38,7 +37,7 @@ const Header: React.FC<headerInputs> = ({ activeTab }) => {
           className={twMerge(
             clsx(
               activeTab == "resume" &&
-                "underline underline-offset-4 text-accent",
+              "underline underline-offset-4 text-accent",
             ),
             "hover:text-secondary transition duration-300",
           )}
