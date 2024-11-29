@@ -1,0 +1,34 @@
+import Header from "./Header";
+import { useEffect, useState } from "react";
+interface blogInputs {
+  blogName: string;
+}
+
+// now the import statement here is a dynamic import
+// It returns a promise which needs to be handled in an async function
+async function getBlogContent(blogName: string) {
+  let file: any;
+  try {
+    file = await import(`../blogs/${blogName}.mdx`);
+    return file.default;
+  } catch (err) {
+    return new Error("Couldn't import file");
+  }
+}
+
+const Blog: React.FC<blogInputs> = ({ blogName }) => {
+  const [blogContent, setblogContent] = useState("");
+  useEffect(() => {
+    getBlogContent(blogName).then((blogData) => setblogContent(blogData));
+  }, []);
+
+  return (
+    <>
+      <Header activeTab="blog" />
+      <div>{blogName}</div>
+      <div>{blogContent}</div>
+    </>
+  );
+};
+
+export default Blog;

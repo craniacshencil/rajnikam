@@ -27,7 +27,7 @@ async function getBlogFrontmatter() {
   return blogList;
 }
 
-const Blog: React.FC = () => {
+const Blogs: React.FC = () => {
   const [blogs, setblogs] = useState<blogInfo[]>([]);
   useEffect(() => {
     getBlogFrontmatter().then((blogList) => setblogs(blogList));
@@ -52,4 +52,4 @@ const Blog: React.FC = () => {
   );
 };
 
-export default Blog;
+export default Blogs;
