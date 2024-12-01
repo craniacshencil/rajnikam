@@ -5,7 +5,7 @@ interface headerInputs {
 }
 const Header: React.FC<headerInputs> = ({ activeTab }) => {
   return (
-    <div className="w-full flex justify-between flex-wrap items-center">
+    <div className="w-full flex justify-between flex-wrap items-center mt-5">
       <h1 className="text-3xl self-end text-primary">Raj Nikam</h1>
       <nav className="flex justify-around gap-2 mt-1 text-m self-start text-primary font-bold">
         <a
