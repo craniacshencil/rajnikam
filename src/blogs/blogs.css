@@ -1,0 +1,80 @@
+/* Realtime colors settings */
+.blog {
+  --text: hsl(267, 33%, 95%);
+  --background: hsl(267, 31%, 6%);
+  --primary: hsl(271, 32%, 71%);
+  --secondary: hsl(313, 33%, 55%);
+  --accent: hsl(330, 32%, 54%);
+}
+
+@media (prefers-color-scheme: dark) {
+  .blog {
+    --text: hsl(263, 31%, 5%);
+    --background: hsl(267, 29%, 94%);
+    --primary: hsl(271, 32%, 29%);
+    --secondary: hsl(313, 33%, 66%);
+    --accent: hsl(330, 32%, 46%);
+  }
+}
+
+.blog h1 {
+  font-size: 2rem;
+  border-bottom: 1px solid gray;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.blog h2 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+}
+
+.blog h3 {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog a {
+  color: var(--accent);
+}
+
+.blog a:hover {
+  opacity: 70%;
+}
+
+.blog pre {
+  font-size: 0.8rem;
+  background-color: #282828;
+  padding-left: 0.5rem;
+  border-radius: 0.2rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  width: 100%;
+}
+
+.blog ul {
+  color: white;
+  padding-left: 1.5rem;
+  list-style-type: circle;
+}
+
+.blog img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.3rem;
+}
