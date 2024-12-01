@@ -25,9 +25,9 @@ const Blog: React.FC<blogInputs> = ({ blogName }) => {
 
   return (
     <div className="dark w-screen text-white flex flex-col justify-center bg-background items-center">
-      <div className="min-h-screen w-10/12 md:m-10 lg:m-0 xl:w-2/5 flex justify-center items-start flex-col gap-5">
+      <div className="min-h-screen w-10/12 md:w-3/5 md:m-10 lg:m-0 xl:w-2/5 flex justify-center items-start flex-col gap-5">
         <Header activeTab="blog" />
-        <div className="blog w-full text-justify">{blogContent}</div>
+        <div className="blog w-full text-justify mb-5">{blogContent}</div>
       </div>
     </div>
   );

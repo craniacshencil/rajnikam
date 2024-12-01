@@ -2,7 +2,7 @@ import Header from "./components/Header";
 const App = () => {
   return (
     <div className="dark text-white flex justify-center bg-background items-center">
-      <main className="min-h-screen w-10/12 md:m-10 lg:m-0 xl:w-2/5 flex justify-center items-start flex-col gap-5">
+      <main className="min-h-screen w-10/12 md:w-3/5 md:m-10 lg:m-0 xl:w-2/5 flex justify-center items-start flex-col gap-5">
         <Header activeTab="home" />
 
         <div>

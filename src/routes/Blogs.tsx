@@ -35,7 +35,7 @@ const Blogs: React.FC = () => {
 
   return (
     <div className="dark text-white flex flex-col justify-center bg-background items-center">
-      <div className="min-h-screen w-10/12 md:m-10 lg:m-0 xl:w-2/5 flex justify-center items-start flex-col gap-5">
+      <div className="min-h-screen w-10/12 md:w-3/5 md:m-10 lg:m-0 xl:w-2/5 flex justify-center items-start flex-col gap-5">
         <Header activeTab="blog" />
         <div className="flex flex-col gap-10 mt-5">
           {blogs.map((blog: blogInfo) => (
@@ -44,6 +44,7 @@ const Blogs: React.FC = () => {
               title={blog.title}
               date={blog.date}
               excerpt={blog.excerpt}
+              slug={blog.slug}
             />
           ))}
         </div>
