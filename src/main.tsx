@@ -7,7 +7,7 @@ import Blogs from "./routes/Blogs";
 import Blog from "./components/Blog";
 
 // Get blognames and create routes dynamically
-const blogs = import.meta.glob("./blogs/*.mdx");
+const blogs = import.meta.glob("/src/blogs/*.mdx");
 const blogFilenames = Object.keys(blogs).map((name) =>
   name.slice(8, name.lastIndexOf(".")),
 );

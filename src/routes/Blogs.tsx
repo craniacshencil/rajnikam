@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import Blogcard from "../components/Blogcard";
 import { useEffect, useState } from "react";
-const modules = import.meta.glob("../blogs/*.mdx");
+const modules = import.meta.glob("src/blogs/*.mdx");
 
 export interface blogInfo {
   title: string;
