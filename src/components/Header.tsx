@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 interface headerInputs {
-  activeTab: "home" | "blog" | "resume";
+  activeTab: "home" | "blog";
 }
 const Header: React.FC<headerInputs> = ({ activeTab }) => {
   return (
@@ -30,20 +30,7 @@ const Header: React.FC<headerInputs> = ({ activeTab }) => {
           )}
           href={`/blogs`}
         >
-          Blog{" "}
-        </a>
-        <p>|</p>
-        <a
-          className={twMerge(
-            clsx(
-              activeTab == "resume" &&
-              "underline underline-offset-4 text-accent",
-            ),
-            "hover:text-secondary transition duration-300",
-          )}
-          href={`/resume`}
-        >
-          Resume
+          Blog
         </a>
       </nav>
     </div>
