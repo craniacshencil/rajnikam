@@ -9,7 +9,7 @@ interface blogCardInputs {
 const Blogcard: React.FC<blogCardInputs> = ({ title, date, excerpt, slug }) => {
   const navigate = useNavigate();
   const displayBlog = () => {
-    navigate("/blogs/" + slug);
+    navigate("/rajnikam/blogs/" + slug);
   };
   return (
     <div

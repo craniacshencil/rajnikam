@@ -12,17 +12,17 @@ const blogFilenames = Object.keys(blogs).map((name) =>
   name.slice(8, name.lastIndexOf(".")),
 );
 const blogRoutes = blogFilenames.map((fileName) => ({
-  path: `/blogs/${fileName}`,
+  path: `/rajnikam/blogs/${fileName}`,
   element: <Blog key={fileName} blogName={fileName} />,
 }));
 
 const staticRoutes = [
   {
-    path: "/",
+    path: "/rajnikam",
     element: <App />,
   },
   {
-    path: "/blogs",
+    path: "/rajnikam/blogs",
     element: <Blogs />,
   },
 ];
