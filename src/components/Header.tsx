@@ -16,7 +16,7 @@ const Header: React.FC<headerInputs> = ({ activeTab }) => {
             ),
             "hover:text-secondary transition duration-300",
           )}
-          href={`/rajnikam`}
+          href={`/rajnikam/`}
         >
           Home
         </a>

@@ -17,7 +17,7 @@ const blogFilenames = Object.keys(blogs).map((name) =>
   name.slice(name.lastIndexOf("blogs/") + 6, name.lastIndexOf(".")),
 );
 const blogRoutes = blogFilenames.map((fileName) => ({
-  path: `/rajnikam/blogs/${fileName}`,
+  path: `/blogs/${fileName}`,
   element: <Blog key={fileName} blogName={fileName} />,
 }));
 
