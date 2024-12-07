@@ -25,7 +25,7 @@ The standard step, created bootable media with [usbimager](https://gitlab.com/bz
 
 I was in live mode. Checked the audio, wifi was working (surprisingly) watched some youtube video. Cinnamon seemed pretty intuitive so I went forward with the installation. I proceeded with the install and then encountered BitLocker.
 
-<img src="/linux_for_the_first_time/bitlocker.jpeg"></img>
+<img src="/rajnikam/linux_for_the_first_time/bitlocker.jpeg" />
 
 Bitlocker is a disk encryption software that makes sure that your data is protected. 
 The Linux bootable media is seen as an "outsider" that is not authorized to make changes to the disk. 
@@ -38,17 +38,17 @@ backup of my windows partition. Also I didn't figure these things out on my own 
 <br />
 My D drive was empty anyway so I made a 150Gb partition to house mint. Also I realized F3 led me to windows' advanced startup and not actually my boot menu. F9 was the key to enter boot menu, I booted from device and had my first error.
 
-<img src="/linux_for_the_first_time/error.jpeg"></img>
+<img src="/rajnikam/linux_for_the_first_time/error.jpeg"></img>
 
 All this time I also had secure boot enabled so I disabled it and tried again, same result. Both of us thought the error might be
 stemming out of the bootable media so I decided to create it again. Booted into windows and now my pendrive wasn't getting recognized.
 
-<img src="/linux_for_the_first_time/bricked-pendrive.jpeg"></img>
+<img src="/rajnikam/linux_for_the_first_time/bricked-pendrive.jpeg"></img>
 
 I rebooted and then again the same message, then I plugged my pendrive in another port and voila! It was working. I had a sigh of relief but then realized, if its not the pendrive my USB port got fried? Switched the ports again and now was it working? Yes it was.
 Nothing was fried. I then decided to check my USB and this is what I see.
 
-<img src="/linux_for_the_first_time/shrunk-pendrive.jpeg"></img>
+<img src="/rajnikam/linux_for_the_first_time/shrunk-pendrive.jpeg"></img>
 
 I was shocked, now I had no doubt in my head that my pendrive was broken. My 8Gb pendrive now only had 4.9Mb space in total. I did a quick google search and realized this is very common.
 Not pendrives breaking down, it is windows not being able to recognize "bootable media" as storage space. Windows uses NTFS and the bootable media probably had "ext4/gpt" partitions. I found this [handy video](https://www.youtube.com/watch?v=bHqFaJfpviI) and formatted my pendrive and renamed it. The utility "diskpart" mentioned in this video also solves the problem of windows not recognizing your pendrive.
@@ -79,7 +79,7 @@ Switched off my latop, booted it again, spammed F9 for the umpteenth time and fi
 It had only opened once for me during the BitLocker saga. 
 I went forward with the installation and there I had it, my first installation of Linux. Felt good. 
 
-<img src="/linux_for_the_first_time/success.jpeg"></img>
+<img src="/rajnikam/linux_for_the_first_time/success.jpeg" />
 
 Its been six months on Linux, dare I say Linux contrarily has been giving me way less hiccups than windows. I spent the first 2 weeks ricing (maybe I'll write about it later) and have pretty much not used windows ever since.
 

@@ -8,8 +8,13 @@ import Blog from "./components/Blog";
 
 // Get blognames and create routes dynamically
 const blogs = import.meta.glob("/src/blogs/*.mdx");
+
 const blogFilenames = Object.keys(blogs).map((name) =>
-  name.slice(8, name.lastIndexOf(".")),
+  // This will break your app changing the path
+  // is breaking urls for the blogs, I spent a whole day only to realize
+  // instead of /rajnikam/blogs/<blog_name>
+  // it was /rajnikam/blogs/gs/<blog_name> that was breaking the site
+  name.slice(name.lastIndexOf("blogs/") + 6, name.lastIndexOf(".")),
 );
 const blogRoutes = blogFilenames.map((fileName) => ({
   path: `/rajnikam/blogs/${fileName}`,
@@ -29,7 +34,7 @@ const staticRoutes = [
 
 const routes = blogRoutes.concat(staticRoutes);
 const router = createBrowserRouter(routes);
-
+console.log(routes);
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <RouterProvider router={router} />
