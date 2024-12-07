@@ -23,18 +23,17 @@ const blogRoutes = blogFilenames.map((fileName) => ({
 
 const staticRoutes = [
   {
-    path: "/rajnikam",
+    path: "/",
     element: <App />,
   },
   {
-    path: "/rajnikam/blogs",
+    path: "/blogs",
     element: <Blogs />,
   },
 ];
 
 const routes = blogRoutes.concat(staticRoutes);
-const router = createBrowserRouter(routes);
-console.log(routes);
+const router = createBrowserRouter(routes, { basename: "/rajnikam" });
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <RouterProvider router={router} />
