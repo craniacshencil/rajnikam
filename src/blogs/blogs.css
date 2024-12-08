@@ -1,5 +1,5 @@
 /* Realtime colors settings */
-.blog {
+.dark .blog {
   --text: hsl(267, 33%, 95%);
   --background: hsl(267, 31%, 6%);
   --primary: hsl(271, 32%, 71%);
@@ -7,7 +7,8 @@
   --accent: hsl(330, 32%, 54%);
 }
 
-@media (prefers-color-scheme: dark) {
+/* not function right now because no dark/light toggle present */
+@media (prefers-color-scheme: light) {
   .blog {
     --text: hsl(263, 31%, 5%);
     --background: hsl(267, 29%, 94%);

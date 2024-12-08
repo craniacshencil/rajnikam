@@ -1,12 +1,7 @@
 import { useNavigate } from "react-router-dom";
-interface blogCardInputs {
-  title: string;
-  date: Date;
-  excerpt: string;
-  slug: string;
-}
+import { blogInfo } from "../routes/Blogs";
 
-const Blogcard: React.FC<blogCardInputs> = ({ title, date, excerpt, slug }) => {
+const Blogcard: React.FC<blogInfo> = ({ title, slug, date, excerpt }) => {
   const navigate = useNavigate();
   const displayBlog = () => {
     navigate("/blogs/" + slug);

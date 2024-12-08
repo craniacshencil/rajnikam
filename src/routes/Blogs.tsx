@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Blogcard from "../components/Blogcard";
 import { useEffect, useState } from "react";
 const modules = import.meta.glob("/src/blogs/*.mdx");
@@ -48,6 +49,7 @@ const Blogs: React.FC = () => {
             />
           ))}
         </div>
+        <Footer />
       </div>
     </div>
   );
