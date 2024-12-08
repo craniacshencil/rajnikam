@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.tsx";
 import Blogs from "./routes/Blogs";
 import Blog from "./components/Blog";
+import NotFound from "./routes/NotFound";
 
 // Get blognames and create routes dynamically
 const blogs = import.meta.glob("/src/blogs/*.mdx");
@@ -22,6 +23,10 @@ const blogRoutes = blogFilenames.map((fileName) => ({
 }));
 
 const staticRoutes = [
+  {
+    path: "*",
+    element: <NotFound />,
+  },
   {
     path: "/",
     element: <App />,

@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 interface headerInputs {
-  activeTab: "home" | "blog";
+  activeTab: "home" | "blog" | null;
 }
 const Header: React.FC<headerInputs> = ({ activeTab }) => {
   return (
