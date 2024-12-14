@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 const App = () => {
   return (
-    <div className="dark text-white flex justify-center bg-background items-center">
+    <div className="text-text bg-background flex justify-center items-center">
       <main className="min-h-screen w-10/12 md:w-3/5 md:m-10 lg:m-0 xl:w-2/5 flex justify-center items-start flex-col gap-5 text-justify">
         <Header activeTab="home" />
 

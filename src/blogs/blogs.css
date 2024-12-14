@@ -1,24 +1,21 @@
 /* Realtime colors settings */
-.dark .blog {
-  --text: hsl(267, 33%, 95%);
-  --background: hsl(267, 31%, 6%);
-  --primary: hsl(271, 32%, 71%);
-  --secondary: hsl(313, 33%, 55%);
-  --accent: hsl(330, 32%, 54%);
+.blog {
+  --text: hsl(274 30% 9%);
+  --background: hsl(289, 11%, 85%);
+  --primary: hsl(274 46% 30%);
+  --secondary: hsl(274 55% 66%);
+  --accent: hsl(274 63% 43%);
 }
-
-/* not function right now because no dark/light toggle present */
-@media (prefers-color-scheme: light) {
-  .blog {
-    --text: hsl(263, 31%, 5%);
-    --background: hsl(267, 29%, 94%);
-    --primary: hsl(271, 32%, 29%);
-    --secondary: hsl(313, 33%, 66%);
-    --accent: hsl(330, 32%, 46%);
-  }
+.dark .blog {
+  --text: hsl(274 30% 91%);
+  --background: hsl(276 38% 5%);
+  --primary: hsl(274 46% 70%);
+  --secondary: hsl(274 55% 34%);
+  --accent: hsl(274 63% 57%);
 }
 
 .blog h1 {
+  color: var(--text);
   font-size: 2rem;
   border-bottom: 1px solid gray;
   margin-top: 1rem;
@@ -35,6 +32,7 @@
 }
 
 .blog h3 {
+  color: var(--text);
   font-size: 1.3rem;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
@@ -67,7 +65,7 @@
 }
 
 .blog ul {
-  color: white;
+  color: var(--text);
   padding-left: 1.5rem;
   list-style-type: circle;
 }
@@ -78,4 +76,8 @@
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   border-radius: 0.3rem;
+}
+
+.blog p {
+  color: var(--text);
 }
