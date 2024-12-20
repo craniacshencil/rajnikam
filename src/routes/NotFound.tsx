@@ -10,7 +10,7 @@ const NotFound: React.FC = () => {
             You have wandered... well nowhere
           </div>
           <div className="text-xl self-center pb-3">
-            Here are some cool blogs that I found while making this
+            Here are some cool blogs I found while making this
           </div>
           <div className="md:flex md:flex md:justify-center md:items-center md:mb-0 md:gap-5">
             <div>
