@@ -31,10 +31,15 @@
 }
 
 /* Override Prism styles */
+code,
 pre {
+  font-family: "Fira Code", "JetBrains Mono", "Source Code Pro",
+    "Cascadia Code", "Menlo", "Consolas", "Liberation Mono", monospace;
   background: var(--prism-bg) !important;
   color: var(--prism-text) !important;
   font-size: 0.8rem;
+}
+pre {
   padding: 1em !important;
   margin: 1em 0 !important;
   overflow: auto !important;
@@ -42,7 +47,14 @@ pre {
 }
 
 code {
-  padding: 0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem !important;
+  /*border: 0.1rem solid var(--prism-comment);*/
+}
+
+pre code {
+  padding: 0rem;
+  border: 0px;
 }
 
 .token.comment,
