@@ -1,3 +1,4 @@
+@import "./codeblock.css";
 /* Realtime colors settings */
 .blog {
   --text: hsl(274 30% 9%);
@@ -46,23 +47,23 @@
   opacity: 70%;
 }
 
-.blog pre {
-  font-size: 0.8rem;
-  background-color: #282828;
-  padding-left: 0.5rem;
-  border-radius: 0.2rem;
-  padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
-  overflow-x: hidden;
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  max-width: 100%;
-  width: 100%;
-}
+/*.blog pre {*/
+/*  font-size: 0.8rem;*/
+/*  background-color: #282828;*/
+/*  padding-left: 0.5rem;*/
+/*  border-radius: 0.2rem;*/
+/*  padding-bottom: 0.5rem;*/
+/*  padding-top: 0.5rem;*/
+/*  overflow-x: hidden;*/
+/*  margin-top: 0.75rem;*/
+/*  margin-bottom: 0.75rem;*/
+/**/
+/*  white-space: pre-wrap;*/
+/*  word-wrap: break-word;*/
+/*  overflow-wrap: break-word;*/
+/*  max-width: 100%;*/
+/*  width: 100%;*/
+/*}*/
 
 .blog ul {
   color: var(--text);
@@ -80,4 +81,6 @@
 
 .blog p {
   color: var(--text);
+  display: block;
+  margin-top: 1rem;
 }
