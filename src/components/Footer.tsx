@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
           className="text-sm text-gray-500 dark:text-gray-400 transition dark:hover:text-gray-300 hover:text-gray-900"
           target="_blank"
           rel="noopener noreferrer"
-          href="https://in.linkedin.com/in/raj-nikam-8b2b93254"
+          href="https://in.linkedin.com/in/nikamraj"
         >
           <svg
             viewBox="0 0 24 24"

@@ -49,6 +49,15 @@ const Header: React.FC<headerInputs> = ({ activeTab }) => {
         >
           Blog
         </a>
+        <p>|</p>
+        <a
+          className="hover:text-secondary transition duration-300"
+          href="/rajnikam/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Resume
+        </a>
       </nav>
     </div>
   );
