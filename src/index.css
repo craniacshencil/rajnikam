@@ -31,11 +31,11 @@ html {
 /* Realtime colors + shadcn settings */
 @layer base {
   :root {
-    --text: 274 30% 9%;
+    --text: 274 30% 30%;
     --background: 289 11% 85%;
     --primary: 274 46% 30%;
     --secondary: 274 55% 66%;
-    --accent: 274 63% 43%;
+    --accent: 274 53% 53%;
 
     /* Scrollbar (light mode) */
     --scrollbar-track: #e2dbe8;

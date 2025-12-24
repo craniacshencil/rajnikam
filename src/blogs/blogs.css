@@ -1,11 +1,11 @@
 @import "./codeblock.css";
 /* Realtime colors settings */
 .blog {
-  --text: hsl(274 30% 9%);
+  --text: hsl(274 60% 20%);
   --background: hsl(289, 11%, 85%);
   --primary: hsl(274 46% 30%);
   --secondary: hsl(274 55% 66%);
-  --accent: hsl(274 63% 43%);
+  --accent: hsl(274 53% 53%);
 }
 .dark .blog {
   --text: hsl(274 30% 91%);
