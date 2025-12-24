@@ -39,7 +39,7 @@ export function BlogTitle({ title }: BlogTitleProps) {
   return (
     <h1
       ref={containerRef}
-      className="relative overflow-hidden whitespace-nowrap truncate text-text text-2xl"
+      className="relative lg:overflow-hidden lg:whitespace-nowrap lg:truncate text-text text-2xl"
     >
       <span
         ref={textRef}
