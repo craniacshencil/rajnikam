@@ -121,7 +121,7 @@ const Blogs: React.FC = () => {
           selectedTags={selectedTags}
           setselectedTags={setselectedTags}
         />
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-5 w-full">
           {displayBlogs.map((blog: blogInfo) => (
             <Blogcard
               key={blog.slug}

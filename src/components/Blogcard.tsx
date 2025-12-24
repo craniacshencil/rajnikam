@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { blogInfo } from "../routes/Blogs";
+import { BlogTitle } from "./BlogTitle";
 
 const Blogcard: React.FC<blogInfo> = ({ title, slug, date, excerpt, tags }) => {
   const navigate = useNavigate();
@@ -9,10 +10,11 @@ const Blogcard: React.FC<blogInfo> = ({ title, slug, date, excerpt, tags }) => {
   return (
     <div
       onClick={displayBlog}
-      className="flex flex-col flex-wrap gap-1 mt-5 pb-5 border-b-2 border-gray-400 dark:border-gray-800 cursor-pointer hover:transition hover:duration-300 hover:ease-in-out hover:translate-x-5"
+      className="flex flex-col md:flex-row gap-3 md:gap-10 flex-wrap md:flex-nowrap mt-3 pr-0 pb-3 border-b-2 border-gray-400 dark:border-gray-600 cursor-pointer hover:transition hover:duration-300 hover:ease-in-out hover:opacity-80"
     >
-      <h1 className="shrink text-text text-3xl">{title}</h1>
-      <div className="text-lg text-accent">{date.toString()}</div>
+      <span className="text-lg text-accent shrink-0">{date.toString()}</span>
+      <BlogTitle title={title} />
+      {/* 
       <div className="md:mt-1 md:text-gray-600 md:dark:text-gray-400">
         {excerpt}
       </div>
@@ -26,6 +28,7 @@ const Blogcard: React.FC<blogInfo> = ({ title, slug, date, excerpt, tags }) => {
           </span>
         ))}
       </div>
+  */}
     </div>
   );
 };
