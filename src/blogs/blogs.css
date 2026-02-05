@@ -65,9 +65,18 @@
 /*  width: 100%;*/
 /*}*/
 
-.blog ul {
+.blog ul,
+ol {
   color: var(--text);
   padding-left: 1.5rem;
+}
+
+.blog ol {
+  /* always numbers in ol */
+  list-style: decimal;
+}
+
+.blog ul {
   list-style-type: circle;
 }
 
