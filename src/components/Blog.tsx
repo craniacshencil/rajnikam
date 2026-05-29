@@ -1,6 +1,6 @@
 import Header from "./Header";
 import Footer from "../components/Footer";
-import "../blogs/blogs.css";
+import "./css/blogs.css";
 import { useEffect, useState } from "react";
 interface blogInputs {
   blogName: string;

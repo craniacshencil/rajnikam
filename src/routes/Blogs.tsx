@@ -20,7 +20,11 @@ async function getBlogFrontmatter(): Promise<[blogInfo[], string[]]> {
     const blogList: blogInfo[] = await Promise.all(
         Object.keys(modules).map(async (fileName) => {
             const file: any = await modules[fileName]();
-            allTags.push(...file.tags);
+            try {
+                allTags.push(...file.tags);
+            } catch {
+                console.log(`${file.title} doesn't have tags`)
+            }
             return {
                 title: file.title,
                 slug: file.slug,
@@ -30,10 +34,8 @@ async function getBlogFrontmatter(): Promise<[blogInfo[], string[]]> {
             };
         }),
     );
-    console.log("before sort: ", blogList)
     // datewise sort blogs
     blogList.sort((a, b) => parseDates(b.date).valueOf() - parseDates(a.date).valueOf())
-    console.log(blogList)
     const uniqueTags: Set<string> = new Set(allTags);
     allTags = [...uniqueTags];
     return [blogList, allTags];
