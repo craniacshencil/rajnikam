@@ -32,7 +32,7 @@ async function getBlogFrontmatter(): Promise<[blogInfo[], string[]]> {
     );
     console.log("before sort: ", blogList)
     // datewise sort blogs
-    blogList.sort((a, b) => parseDates(b.date) - parseDates(a.date))
+    blogList.sort((a, b) => parseDates(b.date).valueOf() - parseDates(a.date).valueOf())
     console.log(blogList)
     const uniqueTags: Set<string> = new Set(allTags);
     allTags = [...uniqueTags];
@@ -42,7 +42,7 @@ async function getBlogFrontmatter(): Promise<[blogInfo[], string[]]> {
 function parseDates(date: string) {
     const parts = date.split('-')
     // Months start from 0-11 in js
-    return new Date(parts[2], parts[1] - 1, parts[0])
+    return new Date(parseInt(parts[2]), parseInt(parts[1]) - 1, parseInt(parts[0]))
 
 }
 
