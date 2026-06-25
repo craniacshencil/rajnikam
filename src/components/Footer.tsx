@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
           className="text-sm text-gray-500 dark:text-gray-400 transition dark:hover:text-gray-300 hover:text-gray-900"
           target="_blank"
           rel="noopener noreferrer"
-          href="mailto:rajnikam26@apsit.edu.in"
+          href="mailto:work.rajnikam@protonmail.com"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
