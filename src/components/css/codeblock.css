@@ -1,5 +1,5 @@
 :root {
-  --prism-bg: #eceff4;
+  --prism-bg: #f6f8fa;
   --prism-text: #2e3440;
   --prism-comment: #81a1c1;
   --prism-keyword: #5e81ac;
@@ -33,8 +33,9 @@
 /* Override Prism styles */
 code,
 pre {
-  font-family: "Fira Code", "JetBrains Mono", "Source Code Pro",
-    "Cascadia Code", "Menlo", "Consolas", "Liberation Mono", monospace;
+  font-family:
+    "Fira Code", "JetBrains Mono", "Source Code Pro", "Cascadia Code", "Menlo",
+    "Consolas", "Liberation Mono", monospace;
   background: var(--prism-bg) !important;
   color: var(--prism-text) !important;
   font-size: 0.8rem;
